@@ -15,9 +15,10 @@
     import PokemonCard from '../components/PokemonCard.vue'
     const pokemon = ref('')
     async function getPokemon() {
-        let res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
+        let res = await fetch('https://data.cityofnewyork.us/resource/5ucz-vwe8.json')
     let data = await res.json()
-    pokemon.value = data.results
+    console.log(data)
+    pokemon.value = data
     }
     onMounted(() => {
         getPokemon()
