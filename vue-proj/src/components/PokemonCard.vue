@@ -1,11 +1,9 @@
 <template>
     <div class="card">
 <h2>
-    {{ props.pokemon.occur_date.split("T")[0] }}
+    {{ props.pokemon[0]}}
 </h2>
-<h3>
-    {{ id }}
-</h3>
+<p>Shootings there: {{ props.pokemon[1] }}</p>
 </div>
 </template>
 <script setup>
